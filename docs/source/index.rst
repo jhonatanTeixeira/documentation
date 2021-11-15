@@ -3,7 +3,7 @@ Welcome to Vox Framework documentation!
 
 **Vox Framework** is a PHP framework heavily inspired by Java's Spring-boot framework, it borrows its main concepts to create an simple AOP environment for fast development with high decoupling in mind. It's fully PSR compatible. Here's a basic vox framework controller example using PHP 8:
 
-.. code-bloc:: php
+.. code-block:: php
 
     use PhpBeans\Annotation\Autowired;
     use Vox\Framework\Behavior\Controller;
