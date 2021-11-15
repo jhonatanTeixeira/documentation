@@ -5,7 +5,6 @@ This framework borrows the spring framework beans concept, a bean is an object t
 A bean must be either: 
 
 1. Annotated by a behavior/stereotype
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: php
 
@@ -19,7 +18,7 @@ A bean must be either:
 
 
 2. Exposed by a factory method on a configuration class
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Configuration classes are basicaly classes full of factory methods, the methods has to be annotated with Bean, so the container builder can locate these methods and start to instance them
 
@@ -44,14 +43,12 @@ Configuration values
 You can set a configuration value directly into the container, and inject it on any property usin the Value annotation. You can set the configuration value either by:
 
 1. Set directly on the container
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: php
   
   $app->getContainer()->set('app.some_value', 'some value')
 
 2. Use a configuration file:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yml
   
@@ -67,7 +64,7 @@ You can set a configuration value directly into the container, and inject it on 
   $app->getContainerBuilder()->withConfigFile('configs/application.yaml');
 
 Injecting the value:
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 .. code-block:: php
 
@@ -95,7 +92,6 @@ Injecting the beans
 Once you have the beans declare somehow, its time to inject them, and there are several ways for doing that:
  
 1. Autowired
-^^^^^^^^^^^^
 
 Inject the bean directly into a property (this is made via reflection under the hood)
  
@@ -111,7 +107,6 @@ Inject the bean directly into a property (this is made via reflection under the 
  
  
 2. Via constructor
-^^^^^^^^^^^^^^^^^^
  
  If the service is not aliased, it will be resolved by its type, so all you need is to declare the constructor with type hints
  
