@@ -121,7 +121,7 @@ Inject the bean directly into a property (this is made via reflection under the 
       }
   }
  
- However if the bean is aliased or you don't want to typehint the constructor you can use the Injects parameter annotation
+However if the bean is aliased or you don't want to typehint the constructor you can use the Injects parameter annotation
  
 .. code-block:: php
   
